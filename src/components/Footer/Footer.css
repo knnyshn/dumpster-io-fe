@@ -1,0 +1,17 @@
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 48px;
+  width: 100vw;
+  border-top: 1px solid #ebebeb;
+  background-color: var(--white);
+  z-index: 2;
+  text-align: center;
+}
+
+.footer p {
+  font-size: 12px;
+  color: var(--grey);
+  margin-top: 16px;
+}

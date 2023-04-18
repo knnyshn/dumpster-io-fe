@@ -1,0 +1,126 @@
+.cards-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 40px;
+  row-gap: 40px;
+  overflow: hidden;
+  margin-bottom: var(--clearFooter)
+}
+
+.card-title {
+  font-weight: 700;
+  color: var(--light-green);
+}
+
+.desc {
+  width: 270px;
+}
+
+.date-posted {
+  float: left;
+  font-size: 12px;
+}
+
+.star {
+  float: right;
+  margin-top: 1px;
+  color: var(--dumpster);
+  transition: color ease-out 100ms;
+}
+
+.star:hover {
+  cursor: pointer;
+}
+
+.star-svg {
+  width: 17px;
+  height: 17px;
+}
+
+.starClick {
+  cursor: pointer;
+  fill: #000;
+  fill-rule: nonzero;
+  transition: fill ease-out 100ms;
+  width: 19px;
+  height: 19px;
+}
+
+.isFav {
+  color: red;
+}
+
+.card-box {
+  margin: 0;
+  padding: 0;
+  box-shadow: var(--shadow);
+}
+
+.swiper-container {
+  height: 270px;
+  width: 270px;
+  overflow: hidden;
+}
+
+.card-img {
+  height: 270px;
+  width: 270px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 6px;
+  transition: box-shadow ease-out 300ms;
+}
+
+.card-img:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 10px var(--shadow2);
+}
+
+.top {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.card-info-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.card-rating {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.card-box .swiper-pagination-bullet-active {
+  background-color: var(--white) !important;
+}
+
+@media only screen and (max-width: 1000px) {
+
+  .swiper-container,
+  .card-img {
+    height: 400px;
+    width: 40vw;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+
+  .swiper-container,
+  .card-img {
+    height: 50%;
+    max-height: 400px;
+    width: 90vw;
+  }
+
+  .cards-flex {
+    padding: 0px;
+  }
+}

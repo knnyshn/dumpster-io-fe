@@ -1,0 +1,176 @@
+:root {
+  --modal-radius: 12px;
+  --black: #0f0f0f;
+  --dark-grey: #222;
+  --error: #a9323a;
+  --eggplant: #1F1028;
+  --dumpster: #314443;
+  --light-green: #52C47A;
+  --tan: #EDE1D8;
+  --light-grey: #f0f0f0;
+  --white: #fefefe;
+  --shadow: rgb(124, 124, 124);
+  --fadeOut: opacity ease-out 300ms;
+}
+
+form p {
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+  font-size: 12px;
+  color: var(--dark-grey);
+  margin-bottom: 12px;
+  text-align: justify;
+}
+
+#username {
+  margin-bottom: 12px;
+}
+
+#password {
+  margin-bottom: 6px;
+}
+
+.fake-link {
+  color: var(--light-green)
+}
+
+.fake-link:hover {
+  cursor: pointer;
+  color: var(--light-green)
+}
+
+.signin-modal {
+  cursor: default;
+  z-index: 1040;
+  position: fixed;
+  width: 568px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--white);
+  box-shadow: 0px 8px 28px var(--shadow);
+  border-radius: var(--modal-radius);
+  animation-duration: 400ms;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+  animation-name: slideEnter;
+  opacity: 0;
+  transition: var(--fadeOut)
+}
+
+.hide {
+  opacity: 0;
+}
+
+.error-message {
+  color: var(--error);
+}
+
+.sign-in-modal-header {
+  border-bottom: 1px solid #EBEBEB;
+  height: 62px;
+  width: 100%;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 20px;
+}
+
+.sign-in-modal-header h1 {
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+  font-size: 14px;
+  line-height: 1.43;
+  color: var(--dark-grey);
+  margin-top: 3px;
+  -webkit-font-smoothing: antialiased;
+  text-align: center;
+}
+
+.signin-modal-input-area {
+  width: 100%;
+  padding: 0px 24px 0px 24px;
+
+}
+
+.signin-modal-input-area h2 {
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 2;
+  color: var(--black);
+  margin-top: 18px;
+  margin-bottom: 18px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.signin-modal-input-area input {
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid var(--dark-grey);
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+  font-size: 14px;
+  line-height: 3;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  padding-left: 5px;
+}
+
+.signin-modal-input-area input[type="submit"] {
+  width: 100%;
+  border-radius: 6px;
+  color: var(--white);
+  font-weight: 600;
+  border: none;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+  font-size: 16px;
+  line-height: 3;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  margin-bottom: 24px;
+  background: linear-gradient(to right, var(--light-green), #48ad6b, var(--light-green));
+}
+
+.signin-modal-input-area input[type="submit"]:hover {
+  cursor: pointer;
+}
+
+.sign-in-modal-svg {
+  position: absolute;
+  display: inline-block;
+  fill: none;
+  height: 24px;
+  width: 24px;
+  stroke: var(--dark-grey);
+  stroke-width: 3;
+  overflow: visible;
+  border-radius: 100%;
+  margin-top: 2px;
+  padding: 4px;
+  transition: background-color ease-out 200ms;
+}
+
+.sign-in-modal-svg:hover {
+  background-color: var(--light-green);
+  stroke: var(--white);
+  cursor: pointer;
+}
+
+.backdrop {
+  cursor: default;
+  position: fixed;
+  z-index: 1040;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--dark-grey);
+  opacity: 0;
+  transition: opacity ease-out 150ms;
+}
+
+.hidden {
+  display: none;
+}

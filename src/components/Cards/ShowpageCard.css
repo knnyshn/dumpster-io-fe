@@ -1,0 +1,30 @@
+.showpage-container {
+  padding: 16px 40px 0px 40px;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  margin-bottom: 148px;
+}
+
+.item-info {
+  /* background: green; */
+  padding-right: 9px;
+}
+
+.item-info img {
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+}
+
+.item-location-map {
+  /* background: blue; */
+  padding-top: 35px;
+  z-index: -1;
+  border-radius: 6px;
+  padding-left: 9px;
+  max-height: 400px;
+}
+
+p {
+  padding: 8px 0px;
+}
